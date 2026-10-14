@@ -1,0 +1,63 @@
+/* RadioBtn */
+
+.labelWrapper {
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-left: -2px;
+}
+
+.radioBtn {
+  display: none;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity var(--transition);
+  fill: var(--text-secondary);
+}
+
+.radioBtnOffI {
+}
+
+.radioBtn:checked + .radioBtnOffI {
+  opacity: 0;
+}
+
+.radioBtnOnI {
+  opacity: 0;
+}
+
+.radioBtn:checked + .radioBtnOffI + .radioBtnOnI {
+  opacity: 1;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+/* RadioBtn List */
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.listName {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-input-placeholder);
+  margin-bottom: 6px;
+}
+
+.list {
+}

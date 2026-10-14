@@ -1,0 +1,64 @@
+.filterPanel {
+  background-color: var(--foreground);
+  border-radius: 20px;
+  padding: 24px;
+  width: 360px;
+}
+
+.locationInputWrapper {
+  margin-bottom: 40px;
+}
+
+.locationLabel {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-input-placeholder);
+}
+
+.locationInput {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  width: 312px;
+  height: 56px;
+}
+
+.locationInput > input {
+  padding: 0;
+  padding-left: 48px;
+
+  &:placeholder-shown + .locationInputIcon {
+    fill: var(--text-input-placeholder);
+  }
+}
+
+.locationInputIcon {
+  position: absolute;
+  left: 20px;
+  top: 16px;
+}
+
+.filtersTitle {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.filtersList {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 46px;
+}
+
+.submitBtn {
+  margin-bottom: 16px;
+}
+
+.clearFiltersBtn {
+  gap: 4px;
+}

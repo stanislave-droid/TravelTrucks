@@ -1,0 +1,13 @@
+.ratingStars {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+}
+
+.filledStar {
+  fill: var(--star-color);
+}
+
+.emptyStar {
+  fill: var(--items-background);
+}

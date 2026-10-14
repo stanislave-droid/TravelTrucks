@@ -1,0 +1,31 @@
+.item {
+  background-color: var(--amenity-background);
+  mix-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 12px 18px;
+  width: fit-content;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.amenitiesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

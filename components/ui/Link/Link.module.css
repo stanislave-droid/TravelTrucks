@@ -1,0 +1,43 @@
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.clear {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-primary);
+  transition: color var(--transition);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--text-links);
+  }
+}
+
+.active {
+  color: var(--text-links);
+}
+
+.green {
+  border-radius: 200px;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  transition: background-color var(--transition);
+  background-color: var(--button-primary);
+  color: var(--text-third);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--button-primary-hover);
+  }
+}
