@@ -8,6 +8,8 @@ import { IFilterOptions } from "@/types/filter";
 import RadioBtnList from "@/components/ui/RadioBtn/RadioBtnList";
 import { CiMap } from "react-icons/ci";
 import { useRouter } from "next/navigation";
+import Link from "@/components/ui/Link/Link";
+import { TRUCKS_DEFAULT_PAGE_PATH } from "@/lib/constants";
 
 interface FilterPanelProps {
   filterOptions: IFilterOptions;
@@ -21,17 +23,12 @@ export default function FilterPanel({
   defaultChecked,
 }: FilterPanelProps) {
   const filtersNames = Object.keys(filterOptions);
-  const router = useRouter();
 
   const handleSubmit = (formData: FormData) => {
     console.log(
       filtersNames.map((name) => formData.get(name)),
       formData.get("location"),
     );
-  };
-
-  const handleClearFilters = () => {
-    router.push("/");
   };
 
   return (
@@ -64,14 +61,14 @@ export default function FilterPanel({
         <Button onClick={() => null} type="submit" className={css.submitBtn}>
           Search
         </Button>
-        <Button
-          onClick={handleClearFilters}
+        <Link
+          href={TRUCKS_DEFAULT_PAGE_PATH}
           variant="white"
           className={css.clearFiltersBtn}
         >
           <IoMdClose size={24} />
           Clear filters
-        </Button>
+        </Link>
       </form>
     </aside>
   );

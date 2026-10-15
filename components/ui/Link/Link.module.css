@@ -41,3 +41,22 @@
     background-color: var(--button-primary-hover);
   }
 }
+
+.white {
+  width: 100%;
+  padding: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  border-radius: 200px;
+  transition: border-color var(--transition);
+  border: var(--button-border-primary);
+  color: var(--text-primary);
+  background-color: var(--background);
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--button-primary-hover);
+  }
+}

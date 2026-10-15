@@ -5,7 +5,7 @@ import css from "./Link.module.css";
 type LinkProps = NextLinkProps & {
   children?: React.ReactNode;
   className?: string;
-  variant?: "clear" | "green";
+  variant?: "clear" | "green" | "white";
   active?: boolean;
 };
 

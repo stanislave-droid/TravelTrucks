@@ -4,10 +4,12 @@ import { BsFuelPump } from "react-icons/bs";
 import Amenity from "./Amenity";
 import css from "./Amenity.module.css";
 import { IItemsNames, IListOfElements } from "@/types/list";
+import clsx from "clsx";
 
 interface AmenitiesListProps {
   amenities: string[];
   showIcons?: boolean;
+  showOnlyLine?: boolean;
 }
 
 const AMENITIES_ICONS: IListOfElements = {
@@ -33,6 +35,7 @@ const AMENITIES_NAMES: IItemsNames = {
 export default function AmenitiesList({
   amenities,
   showIcons,
+  showOnlyLine,
 }: AmenitiesListProps) {
   const amenitiesList = amenities.map((value) =>
     showIcons ? (
@@ -46,5 +49,11 @@ export default function AmenitiesList({
     ),
   );
 
-  return <ul className={css.amenitiesList}>{amenitiesList}</ul>;
+  return (
+    <ul
+      className={clsx(css.amenitiesList, showOnlyLine ? css.showOnlyLine : "")}
+    >
+      {amenitiesList}
+    </ul>
+  );
 }

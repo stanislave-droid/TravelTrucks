@@ -25,7 +25,13 @@
 }
 
 .amenitiesList {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.showOnlyLine {
+  max-height: 48px;
+  overflow-y: hidden;
 }
