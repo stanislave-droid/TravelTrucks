@@ -1,0 +1,6 @@
+.infoBlockWrapper {
+  background-color: var(--foreground);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+}

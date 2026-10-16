@@ -8,10 +8,12 @@ interface TrucksCardListProps {
 
 export default function TrucksCardList({ trucks }: TrucksCardListProps) {
   return (
-    <ul className={css.list}>
-      {trucks.map((truck) => (
-        <TrucksCard key={truck.id} truckInfo={truck} />
-      ))}
-    </ul>
+    <section>
+      <ul className={css.list}>
+        {trucks.map((truck) => (
+          <TrucksCard key={truck.id} truckInfo={truck} />
+        ))}
+      </ul>
+    </section>
   );
 }

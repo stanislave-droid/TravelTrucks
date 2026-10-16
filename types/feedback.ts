@@ -1,4 +1,4 @@
-export interface Feedback {
+export interface IFeedback {
   id: string;
   camperId: string;
   reviewer_name: string;

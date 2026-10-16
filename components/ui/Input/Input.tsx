@@ -34,7 +34,7 @@ export default function Input({
 
   return (
     <div className={clsx(css["wrapper"], className)}>
-      {validationError && (
+      {validationError && onErrorLabel && (
         <label htmlFor={`${id}-${placeholder}`} className={css.label}>
           {onErrorLabel}
         </label>

@@ -1,18 +1,30 @@
 import Link from "@/components/ui/Link/Link";
 import Image from "next/image";
+import css from "./HeroBlock.module.css";
+import clsx from "clsx";
 
 export default function HeroBlock() {
   return (
-    <section>
+    <section
+      className={clsx("container", css.section)}
+      aria-label="Hero section"
+    >
       <Image
         src={"/opengraph-image.jpg"}
         alt="hero-image"
-        width={1440}
-        height={692}
+        fill
+        loading="eager"
+        className={css.image}
       />
-      <h1></h1>
-      <p></p>
-      <Link href="/catalog">View Now</Link>
+      <div className={css.contentWrapper} aria-label="Hero content">
+        <h1 className={css.headding}>Campers of your dreams</h1>
+        <p className={css.text}>
+          You can find everything you want in our catalog
+        </p>
+        <Link href="/trucks" variant="green" className={css.link}>
+          View Now
+        </Link>
+      </div>
     </section>
   );
 }

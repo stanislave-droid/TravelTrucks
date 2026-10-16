@@ -1,0 +1,22 @@
+.inferContentWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.location {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}

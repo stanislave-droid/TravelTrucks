@@ -1,9 +1,6 @@
-import { FaCar } from "react-icons/fa";
-import { LiaSitemapSolid } from "react-icons/lia";
-import { BsFuelPump } from "react-icons/bs";
+import { AMENITIES_ICONS, AMENITIES_NAMES } from "@/lib/constants";
 import Amenity from "./Amenity";
 import css from "./Amenity.module.css";
-import { IItemsNames, IListOfElements } from "@/types/list";
 import clsx from "clsx";
 
 interface AmenitiesListProps {
@@ -11,26 +8,6 @@ interface AmenitiesListProps {
   showIcons?: boolean;
   showOnlyLine?: boolean;
 }
-
-const AMENITIES_ICONS: IListOfElements = {
-  alcove: <FaCar size={20} />,
-  automatic: <LiaSitemapSolid size={20} />,
-  petrol: <BsFuelPump size={20} />,
-};
-
-const AMENITIES_NAMES: IItemsNames = {
-  alcove: "Alcove",
-  radio: "Radio",
-  kitchen: "Kitchen",
-  petrol: "Petrol",
-  ac: "AC",
-  automatic: "Automatic",
-  tv: "TV",
-  bathroom: "Bathroom",
-  refrigerator: "Refrigerator",
-  gas: "Gas",
-  water: "Water",
-};
 
 export default function AmenitiesList({
   amenities,

@@ -16,6 +16,10 @@ import FilterPanel from "@/components/sections/FilterPanel/FilterPanel";
 import TrucksCard from "@/components/sections/TrucksCard/TrucksCard";
 import TrucksCardList from "@/components/sections/TrucksCard/TrucksCardList";
 import TrucksNotFound from "@/components/sections/TrucksCard/TruckNotFound";
+import TruckGallery from "@/components/sections/TruckGallery/TruckGallery";
+import TruckInfo from "@/components/sections/TruckInfo/TruckInfo";
+import ReviewsSection from "@/components/sections/ReviewsSection/ReviewsSection";
+import BookForm from "@/components/sections/BookForm/BookForm";
 
 export default function Home() {
   return (
@@ -227,6 +231,103 @@ export default function Home() {
           ]}
         />
         <TrucksNotFound />
+        <div className={css.truckInfo}>
+          <TruckGallery
+            images={[
+              {
+                id: "cmqv06hwy0008yyxt6cpxgzoo",
+                camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+                thumb:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-1.jpg",
+                original:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-1.jpg",
+                order: 1,
+              },
+              {
+                id: "cmqv06hwy0009yyxtfoy1d58h",
+                camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+                thumb:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-2.jpg",
+                original:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-2.jpg",
+                order: 2,
+              },
+              {
+                id: "cmqv06hwy000ayyxtx44r0ncf",
+                camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+                thumb:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-3.jpg",
+                original:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-3.jpg",
+                order: 3,
+              },
+              {
+                id: "cmqv06hwy000byyxtygf6vo10",
+                camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+                thumb:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-4.jpg",
+                original:
+                  "https://ac.goit.global/fullstack/career/campers/cruise-america-c-21/cruise-america-c-21-4.jpg",
+                order: 4,
+              },
+            ]}
+          />
+          <TruckInfo
+            truckInfo={{
+              id: "cmqv06i2e008yyyxtohrozy6y",
+              name: "Terrace Alcove 25P",
+              price: 10000,
+              rating: 4.4,
+              location: "Ukraine, Kyiv",
+              description:
+                "The Terrace Alcove 25P is a mid-range petrol alcove motorhome with a clean, practical interior and a smooth automatic gearbox. It's a great all-rounder for families seeking a first motorhome experience or a reliable vehicle for a classic summer road trip.",
+              form: "alcove",
+              length: "6.9m",
+              width: "2.5m",
+              height: "3.6m",
+              tank: "170l",
+              consumption: "23l/100km",
+              transmission: "automatic",
+              engine: "petrol",
+              amenities: [
+                "ac",
+                "bathroom",
+                "kitchen",
+                "radio",
+                "refrigerator",
+                "microwave",
+                "water",
+              ],
+              createdAt: "2026-06-26T14:05:05.654Z",
+              updatedAt: "2026-06-26T14:05:05.654Z",
+              gallery: [],
+              totalReviews: 2,
+            }}
+          />
+        </div>
+        <ReviewsSection
+          reviews={[
+            {
+              id: "cmqv06hwy000cyyxtdr2yi1a7",
+              camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+              reviewer_name: "Alice",
+              reviewer_rating: 5,
+              comment:
+                "The Cruise America C-21 exceeded our expectations! Compact yet spacious, it's perfect for a couple's getaway. The kitchen facilities were impressive, and the bathroom setup was convenient. Highly recommended for a cozy and memorable road trip.",
+              createdAt: "2026-06-26T14:05:05.458Z",
+            },
+            {
+              id: "cmqv06hwy000dyyxtora5pvsx",
+              camperId: "cmqv06hwy0007yyxt7z2vjb4y",
+              reviewer_name: "Bob",
+              reviewer_rating: 3,
+              comment:
+                "Decent motorhome for the price. The Cruise America C-21 provided a comfortable stay, but the lack of a TV and CD player was a downside for entertainment. Overall, a satisfactory experience for a short trip.",
+              createdAt: "2026-06-26T14:05:05.458Z",
+            },
+          ]}
+        />
+        <BookForm />
       </div>
     </main>
   );

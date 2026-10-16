@@ -8,3 +8,8 @@
   gap: 16px;
   padding: 32px;
 }
+
+.truckInfo {
+  display: flex;
+  gap: 24px;
+}

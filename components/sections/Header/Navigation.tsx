@@ -1,25 +1,27 @@
+"use client";
+
 import Link from "@/components/ui/Link/Link";
 import css from "./Header.module.css";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
-interface NavigationProps {
-  activePage: string;
-}
+const Navigation = () => {
+  const pathName = usePathname();
+  const activePage = pathName;
 
-const Navigation = ({ activePage }: NavigationProps) => {
   return (
-    <nav className={css.nav} aria-label="Основна навігація">
+    <nav className={css.navigation} aria-label="Основна навігація">
       <Link
         href="/"
-        className={clsx(css.navLink, activePage == "" ? css.activeLink : "")}
+        className={clsx(css.navLink, activePage == "/" ? css.activeLink : "")}
       >
         Home
       </Link>
       <Link
-        href="/catalog"
+        href="/trucks"
         className={clsx(
           css.navLink,
-          activePage == "catalog" ? css.activeLink : "",
+          activePage == "/trucks" ? css.activeLink : "",
         )}
       >
         Catalog

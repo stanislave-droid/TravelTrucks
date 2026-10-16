@@ -1,0 +1,23 @@
+.galleryWrapper {
+  max-width: 638px;
+}
+
+.originalSwiper {
+  margin-bottom: 27px;
+}
+
+.originalImage {
+  border-radius: 17px;
+  cursor: pointer;
+}
+
+.thumbImage {
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.thumbImage:hover,
+.thumbImage:focus-visible,
+.activeThumb {
+  border: 3px solid var(--button-primary);
+}

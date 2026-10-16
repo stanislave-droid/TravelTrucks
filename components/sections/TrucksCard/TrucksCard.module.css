@@ -2,9 +2,9 @@
 
 .cardWrapper {
   width: 888px;
-  background-color: var(--foreground);
-  border-radius: 16px;
-  padding: 24px;
+}
+
+.infoBlockContainer {
   display: flex;
   gap: 24px;
 }
@@ -32,29 +32,6 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: var(--text-primary);
-}
-
-.inferContentWrapper {
-  display: flex;
-  gap: 16px;
-}
-
-.ratingWrapper {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.locationWrapper {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.location {
-  font-size: 16px;
-  line-height: 1.5;
   color: var(--text-primary);
 }
 
