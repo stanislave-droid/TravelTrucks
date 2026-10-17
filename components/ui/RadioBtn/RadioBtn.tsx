@@ -16,23 +16,25 @@ export default function RadioBtn({
   defaultChecked,
 }: RadioBtnProps) {
   return (
-    <label className={css.labelWrapper}>
-      <input
-        name={name}
-        type="radio"
-        value={keyValue}
-        className={css.radioBtn}
-        defaultChecked={defaultChecked}
-      />
-      <IoIosRadioButtonOff
-        size={24}
-        className={clsx(css.icon, css.radioBtnOffI)}
-      />
-      <IoIosRadioButtonOn
-        size={24}
-        className={clsx(css.icon, css.radioBtnOnI)}
-      />
-      <p className={css.text}>{textValue}</p>
-    </label>
+    <li>
+      <label className={css.labelWrapper}>
+        <input
+          name={name}
+          type="radio"
+          value={keyValue}
+          className={css.radioBtn}
+          defaultChecked={defaultChecked}
+        />
+        <IoIosRadioButtonOff
+          size={24}
+          className={clsx(css.icon, css.radioBtnOffI)}
+        />
+        <IoIosRadioButtonOn
+          size={24}
+          className={clsx(css.icon, css.radioBtnOnI)}
+        />
+        <p className={css.text}>{textValue}</p>
+      </label>
+    </li>
   );
 }

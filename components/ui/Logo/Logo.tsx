@@ -9,7 +9,7 @@ interface LogoProps {
 
 export default function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={clsx(css.logo, className)}>
+    <Link href="/" className={clsx(css.logo, className)} aria-label="Logo">
       <Icon name="icon-logo" width={136} height={16} />
     </Link>
   );
