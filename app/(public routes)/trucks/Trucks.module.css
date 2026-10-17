@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  gap: 65px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.loadMore {
+  margin: 0 auto;
+  width: 145px;
+  height: 56px;
+}
+
+.trucksList {
+  margin-bottom: 40px;
+}

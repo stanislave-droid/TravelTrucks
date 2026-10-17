@@ -1,7 +1,7 @@
 "use client";
 
+import { CreateQueryClient } from "@/lib/providers/TanStackQuery";
 import {
-  defaultShouldDehydrateQuery,
   environmentManager,
   QueryClient,
   QueryClientProvider,
@@ -14,21 +14,7 @@ interface TanStackQueryProviderProps {
 
 let browserQueryClient: QueryClient | undefined;
 
-function CreateQueryClient() {
-  return new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 60 * 1000,
-      },
-      dehydrate: {
-        shouldDehydrateQuery: (query) =>
-          defaultShouldDehydrateQuery(query) || query.state.status == "pending",
-      },
-    },
-  });
-}
-
-function getQueryClient() {
+export function getQueryClient() {
   if (environmentManager.isServer()) {
     return CreateQueryClient();
   } else {

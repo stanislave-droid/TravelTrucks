@@ -12,7 +12,7 @@ export default function TrucksNotFound() {
         alt="Trucks not found"
         width={488}
         height={463}
-        quality={100}
+        quality={70}
         loading="eager"
         className={css.notFounImage}
       />

@@ -32,8 +32,8 @@ export const AMENITIES_NAMES: IItemsNames = {
 
 export const RADIO_BTN_LIST_NAMES: IItemsNames = {
   forms: "Camper form",
-  transmissions: "Engine",
-  engines: "Transmission",
+  transmissions: "Transmission",
+  engines: "Engine",
 };
 
 export const RADIO_BTN_TEXT_VALUES: IItemsNames = {
@@ -54,3 +54,17 @@ export const RADIO_BTN_DEFAULT_CHECKED: string[] = [
   "petrol",
   "automatic",
 ];
+
+/* ---------------- FILTERS ---------------- */
+
+export const DEFAULT_FILTERS = {
+  form: "panel_van",
+  transmission: "automatic",
+  engine: "petrol",
+};
+
+export const FILTERS_SEARCHPARAMS_EQUAL: IItemsNames = {
+  forms: "form",
+  transmissions: "transmission",
+  engines: "engine",
+};

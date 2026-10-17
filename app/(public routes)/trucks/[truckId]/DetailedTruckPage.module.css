@@ -1,0 +1,21 @@
+.main {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.mainContent {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 88px;
+}
+
+.additionalContent {
+  display: flex;
+  gap: 48px;
+}
+
+.form {
+  margin-top: 56px;
+}

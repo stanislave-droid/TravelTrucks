@@ -1,17 +1,20 @@
 "use client";
 
 import Input from "@/components/ui/Input/Input";
-import css from "./FilterPanel.module.css";
 import Button from "@/components/ui/Button/Button";
 import { IoMdClose } from "react-icons/io";
 import { IFilterOptions } from "@/types/filter";
 import RadioBtnList from "@/components/ui/RadioBtn/RadioBtnList";
 import { CiMap } from "react-icons/ci";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "@/components/ui/Link/Link";
-import { TRUCKS_DEFAULT_PAGE_PATH } from "@/lib/constants";
+import {
+  FILTERS_SEARCHPARAMS_EQUAL,
+  TRUCKS_DEFAULT_PAGE_PATH,
+} from "@/lib/constants";
+import css from "./FilterPanel.module.css";
 
-interface FilterPanelProps {
+export interface FilterPanelProps {
   filterOptions: IFilterOptions;
   location?: string;
   defaultChecked?: string[];
@@ -23,12 +26,30 @@ export default function FilterPanel({
   defaultChecked,
 }: FilterPanelProps) {
   const filtersNames = Object.keys(filterOptions);
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleSubmit = (formData: FormData) => {
-    console.log(
-      filtersNames.map((name) => formData.get(name)),
-      formData.get("location"),
-    );
+    const filters = filtersNames.map((name) => ({
+      [FILTERS_SEARCHPARAMS_EQUAL[name]]: formData.get(name),
+    }));
+    const location = formData.get("location") || "";
+
+    const params = new URLSearchParams(searchParams.toString());
+
+    filters.forEach((filter) => {
+      for (const key in filter) {
+        params.set(key, filter[key] as string);
+      }
+    });
+
+    if (location) {
+      params.set("location", location as string);
+    } else {
+      params.delete("location");
+    }
+
+    router.push(`${TRUCKS_DEFAULT_PAGE_PATH}?${params}`);
   };
 
   return (
