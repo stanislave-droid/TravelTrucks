@@ -327,7 +327,7 @@ export default function Home() {
             },
           ]}
         />
-        <BookForm />
+        <BookForm truckId="cmqv06hwy000cyyxtdr2yi1a7" />
       </div>
     </main>
   );
